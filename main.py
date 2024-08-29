@@ -64,23 +64,24 @@ elif escolha == 5:
     print('''
 > Qual medida deseja converter?
 
-[1] Quilômetro(km) >>> Metro(m)
-[2] Metro(m) >>> Quilômetro(km)
-[3] Centímetro(cm) >>> Metro(m)
-[4] Metro(m) >>> Centímetro(cm)
-[5] Milímetro(mm) >>> Centímetro(cm)
-[6] Centímetro(cm) >>> Milímetro(mm)
+[1] Quilômetro (km) > > > Metro (m)
+[2] Metro (m) > > > Quilômetro (km)
+[3] Centímetro( cm) > > > Metro (m)
+[4] Metro (m) > > > Centímetro (cm)
+[5] Milímetro (mm) > > > Centímetro (cm)
+[6] Centímetro (cm) > > > Milímetro (mm)
 ''')
 #----------------------------------------------------------------------
 elif escolha == 6:
     print('''
 > Qual volume deseja converter?
 
-[1]
-[2]
-[3]
-[4]
-[5]
+[[1] Quilômetro cúbico(km) > > > Metro(m)
+[2] Metro(m) > > > Quilômetro(km)
+[3] Centímetro(cm) > > > Metro(m)
+[4] Metro(m) > > > Centímetro(cm)
+[5] Milímetro(mm) > > > Centímetro(cm)
+[6] Centímetro(cm) > > > Milímetro(mm)
 ''')
 #------------------------------------------------------------------
 elif escolha == 7:
@@ -89,3 +90,4 @@ elif escolha == 7:
 #---------------------------------------------------------------------------
 else:
    print("Escolha não disponível, tente novamente.")
+#---------------------------------------------------------------------------
