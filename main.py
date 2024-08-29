@@ -1,3 +1,4 @@
+#-----------------------------------------------------------
 print('''     Calculadora Matemática
 ================================
 
@@ -8,9 +9,11 @@ Qual funcionalidade quer usar?
 [3] Volumes de Sólidos
 [4] Equações
 [5] Conversão de Medidas
-[6] Conversão de Volumes 
+[6] Conversão de Volumes
+[7] Porcentagem
 ''')
 escolha = int(input("Digite uma opção: "))
+#-------------------------------------------------------------
 if escolha == 1:
     print('''
 Qual operação matemática irá usar?
@@ -22,6 +25,7 @@ Qual operação matemática irá usar?
 [5] Radiciação
 [6] Potenciação
 ''')
+#----------------------------------------------------------------
 elif escolha == 2:
     print('''
 Qual polígono irá usar?
@@ -32,6 +36,7 @@ Qual polígono irá usar?
 [4] Círculo
 [5] Trapézio
 ''')
+#--------------------------------------------------------------------
 elif escolha == 3:
     print('''
 Qual sólido irá usar?
@@ -44,11 +49,13 @@ Qual sólido irá usar?
 [6] Prisma
 [7] Cone
 ''')
+#---------------------------------------------------------------------
 elif escolha == 4:
-    print('''Qual grau de equação irá usar?
-[1] Primeiro
-[2] Segundo
+    print('''Qual grau de equação deseja usar?
+[1] Equação de 1º grau
+[2] Equação de 2º grau
 ''')
+#----------------------------------------------------------------------
 elif escolha == 5:
     print('''
 Qual medida deseja converter?
@@ -60,9 +67,10 @@ Qual medida deseja converter?
 [5] Milímetro(mm) >>> Centímetro(cm)
 [6] Centímetro(cm) >>> Milímetro(mm)
 ''')
+#----------------------------------------------------------------------
 elif escolha == 6:
     print('''
-Qual será a sua conversão?
+Qual volume deseja converter?
 
 [1]
 [2]
@@ -70,3 +78,4 @@ Qual será a sua conversão?
 [4]
 [5]
 ''')
+#------------------------------------------------------------------
