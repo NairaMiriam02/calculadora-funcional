@@ -79,3 +79,17 @@ Qual volume deseja converter?
 [5]
 ''')
 #------------------------------------------------------------------
+elif escolha == 7:
+    valor = float(input("Digite o valor total: "))
+    percentagem = float(input("Digite a porcentagem sobre o total:
+
+                        
+
+
+
+
+
+
+
+
+                        
