@@ -1,4 +1,6 @@
 #-----------------------------------------------------------
+import math
+
 print('''     
 ============================
    Calculadora Matemática  
@@ -63,7 +65,6 @@ Digite o valor a ser somado ou [0] para Parar:
             print("Divisão por zero não é permitida.")
 #-----------------------------------------------------------------------
     elif escolha == 5:
-        import math
         num = float(input("Digite o número: "))
         raiz = math.sqrt(num)
         print(f"Raiz quadrada de {num}: {raiz:.2f}")
@@ -111,7 +112,6 @@ elif escolha == 2:
         print(f"Área do triângulo: {area:.2f}")
 #-----------------------------------------------------------------------
     elif escolha == 4:
-        import math
         raio = float(input("Digite o raio: "))
         area = math.pi * raio ** 2
         perimetro = 2 * math.pi * raio
@@ -147,7 +147,6 @@ elif escolha == 3:
 ''')
     escolha = int(input(">>> "))
 #-----------------------------------------------------------------------
-    import math
     if escolha == 1:
         raio = float(input("Digite o raio: "))
         altura = float(input("Digite a altura: "))
@@ -172,7 +171,6 @@ elif escolha == 3:
         print(f"Volume da esfera: {volume:.2f}")
 #-----------------------------------------------------------------------
     elif escolha == 5:
-        import math
         base_area = float(input("Digite a área da base: "))
         altura = float(input("Digite a altura: "))
         volume = (1/3) * base_area * altura
