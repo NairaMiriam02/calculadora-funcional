@@ -51,11 +51,21 @@ elif escolha == 4:
 ''')
 elif escolha == 5:
     print('''
-Qual será a sua conversão?
+Qual medida deseja converter?
 
-[1] km ---> m
-[2]  m ---> cm
-[3] cm ---> mm
+[1] Quilômetro(km) >>> Metro(m)
+[2] Metro(m) >>> Quilômetro(km)
+[3] 
 [4] km ---> cm
 [5]  m ---> mm
+''')
+elif escolha == 6:
+    print('''
+Qual será a sua conversão?
+
+[1]
+[2]
+[3]
+[4]
+[5]
 ''')
