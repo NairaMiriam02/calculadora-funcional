@@ -1,8 +1,10 @@
 #-----------------------------------------------------------
-print('''     Calculadora Matemática
-================================
+print('''     
+============================
+   Calculadora Matemática  
+============================
 
-Qual funcionalidade quer usar?
+> Qual funcionalidade deseja usar?
 
 [1] Operações Matemáticas
 [2] Áreas e Perímetros
@@ -12,7 +14,7 @@ Qual funcionalidade quer usar?
 [6] Conversão de Volumes
 [7] Porcentagem
 ''')
-escolha = int(input("Digite uma opção: "))
+escolha = int(input("> Digite uma opção: "))
 #-------------------------------------------------------------
 if escolha == 1:
     print('''
@@ -81,15 +83,5 @@ Qual volume deseja converter?
 #------------------------------------------------------------------
 elif escolha == 7:
     valor = float(input("Digite o valor total: "))
-    percentagem = float(input("Digite a porcentagem sobre o total:
-
-                        
-
-
-
-
-
-
-
-
-                        
+    porcentagem = float(input("Digite a porcentagem sobre o total: "))
+    
