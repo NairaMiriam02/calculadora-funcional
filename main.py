@@ -37,6 +37,7 @@ elif escolha == 2:
 [3] Triângulo
 [4] Círculo
 [5] Trapézio
+[6] Paralelogramo
 ''')
 #--------------------------------------------------------------------
 elif escolha == 3:
