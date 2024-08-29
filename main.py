@@ -86,4 +86,6 @@ elif escolha == 6:
 elif escolha == 7:
     valor = float(input("Digite o valor total: "))
     porcentagem = float(input("Digite a porcentagem sobre o total: "))
-    
+#---------------------------------------------------------------------------
+else:
+   print("Escolha não disponível, tente novamente.")
