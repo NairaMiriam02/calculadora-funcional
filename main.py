@@ -18,7 +18,7 @@ escolha = int(input("> Digite uma opção: "))
 #-------------------------------------------------------------
 if escolha == 1:
     print('''
-Qual operação matemática irá usar?
+> Qual operação matemática irá usar?
 
 [1] Adição
 [2] Subtração
@@ -30,7 +30,7 @@ Qual operação matemática irá usar?
 #----------------------------------------------------------------
 elif escolha == 2:
     print('''
-Qual polígono irá usar?
+> Qual polígono irá usar?
 
 [1] Quadrado
 [2] Retângulo
@@ -41,7 +41,7 @@ Qual polígono irá usar?
 #--------------------------------------------------------------------
 elif escolha == 3:
     print('''
-Qual sólido irá usar?
+> Qual sólido irá usar?
 
 [1] Cilindro
 [2] Cubo
@@ -53,14 +53,16 @@ Qual sólido irá usar?
 ''')
 #---------------------------------------------------------------------
 elif escolha == 4:
-    print('''Qual grau de equação deseja usar?
+    print('''
+> Qual grau de equação deseja usar?
+    
 [1] Equação de 1º grau
 [2] Equação de 2º grau
 ''')
 #----------------------------------------------------------------------
 elif escolha == 5:
     print('''
-Qual medida deseja converter?
+> Qual medida deseja converter?
 
 [1] Quilômetro(km) >>> Metro(m)
 [2] Metro(m) >>> Quilômetro(km)
@@ -72,7 +74,7 @@ Qual medida deseja converter?
 #----------------------------------------------------------------------
 elif escolha == 6:
     print('''
-Qual volume deseja converter?
+> Qual volume deseja converter?
 
 [1]
 [2]
