@@ -14,7 +14,9 @@ print('''
 [6] Conversão de Volumes
 [7] Porcentagem
 ''')
-escolha = int(input("> Digite uma opção: "))
+escolha = int(input('''
+Digite uma opção:
+>>> '''))
 #-------------------------------------------------------------
 if escolha == 1:
     print('''
@@ -27,18 +29,17 @@ if escolha == 1:
 [5] Radiciação
 [6] Potenciação
 ''')
-   escolha = int(input(">>> "))
-   if escolha == 1:
-      soma = 0
-      while True:
-         n = float(input('''
-         Digite o valor a ser somado ou [0] para Parar:
-         >>> 
-         ''')
-         if n != 0:
-            soma = soma + n
-         else:
-            print(f"Soma total: {soma}")
+    escolha = int(input(">>> "))
+    if escolha == 1:
+        soma = 0
+        while True:
+            n = float(input('''
+Digite o valor a ser somado ou [0] para Parar:
+>>> '''))
+            if n != 0:
+                soma = soma + n
+            else:
+                print(f"Soma total: {soma:.2f}")
 #----------------------------------------------------------------
 elif escolha == 2:
     print('''
