@@ -55,9 +55,10 @@ Qual medida deseja converter?
 
 [1] Quilômetro(km) >>> Metro(m)
 [2] Metro(m) >>> Quilômetro(km)
-[3] 
-[4] km ---> cm
-[5]  m ---> mm
+[3] Centímetro(cm) >>> Metro(m)
+[4] Metro(m) >>> Centímetro(cm)
+[5] Milímetro(mm) >>> Centímetro(cm)
+[6] Centímetro(cm) >>> Milímetro(mm)
 ''')
 elif escolha == 6:
     print('''
