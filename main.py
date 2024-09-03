@@ -217,3 +217,6 @@ Digite uma opção:
             except ValueError:
                 # Trata entradas
                 print("Entrada inválida. Por favor, insira um número válido.")
+    elif escolha == 0:
+        break
+print("Você saiu do programa, espero ter ajudado.")
