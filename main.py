@@ -14,9 +14,9 @@ def adicao():
         lista = list(map(float, entrada.split('+')))
         if len(lista) > 0:
             resultado = sum(lista)
-            label_resultado.configure(text=f"Resultado: {resultado}")
+            mostrar.configure(text=f"Resultado: {resultado}")
     except ValueError:
-        label_resultado.configure(text='Entrada inválida. Por favor, insira "+" ou um número válido.')
+        mostrar.configure(text='Entrada inválida. Por favor, insira "+" ou um número válido.')
 
 def subtracao():
     try:
@@ -26,9 +26,9 @@ def subtracao():
             sub = lista[0]
             for n in lista[1:]:
                 sub-=n
-            label_resultado.configure(text=f"Resultado: {sub}")
+            mostrar.configure(text=f"Resultado: {sub}")
     except ValueError:
-        label_resultado.configure(text='Entrada inválida. Por favor, insira "-" ou um número válido.')
+        mostrar.configure(text='Entrada inválida. Por favor, insira "-" ou um número válido.')
 
 def multiplicacao():
     try:
@@ -38,9 +38,9 @@ def multiplicacao():
             mult = 1
             for n in lista:
                 mult *= n
-            label_resultado.configure(text=f"Resultado da multiplicação: {mult}")
+            mostrar.configure(text=f"Resultado da multiplicação: {mult}")
     except ValueError:
-        label_resultado.configure(text='Entrada inválida. Por favor, insira "x" ou um número válido.')
+        mostrar.configure(text='Entrada inválida. Por favor, insira "x" ou um número válido.')
 
 def divisao():
     try:
@@ -52,21 +52,21 @@ def divisao():
                 if n != 0:
                     resultado /= n
                 else:
-                    label_resultado.configure(text="Divisão por zero não é permitida.")
+                    mostrar.configure(text="Divisão por zero não é permitida.")
                     return
-            label_resultado.configure(text=f"Resultado da divisão: {resultado}")
+            mostrar.configure(text=f"Resultado da divisão: {resultado}")
         else:
-            label_resultado.configure(text="Por favor, insira mais de um valor para a divisão.")
+            mostrar.configure(text="Por favor, insira mais de um valor para a divisão.")
     except ValueError:
-        label_resultado.configure(text='Entrada inválida. Por favor, insira "/" ou números válidos.')
+        mostrar.configure(text='Entrada inválida. Por favor, insira "/" ou números válidos.')
 
 def radiciacao():
     try:
         num = float(entry1.get())
         raiz = math.sqrt(num)
-        label_resultado.configure(text=f"Resultado: {raiz}")
+        mostrar.configure(text=f"Resultado: {raiz}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira um número válido.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira um número válido.")
 
 def potenciacao():
     try:
@@ -76,9 +76,9 @@ def potenciacao():
             pot=lista[0]
             for n in lista[1:]:
                 pot**=n
-            label_resultado.configure(text=f"Resultado: {pot}")
+            mostrar.configure(text=f"Resultado: {pot}")
     except ValueError:
-        label_resultado.configure(text='Entrada inválida. Por favor, insira o "^" ou um número válido.')
+        mostrar.configure(text='Entrada inválida. Por favor, insira o "^" ou um número válido.')
 
 # ----- Áreas e Perímetros ----
 def area_perimetro_quad():
@@ -87,9 +87,9 @@ def area_perimetro_quad():
         lado = float(entrada)
         area = lado ** 2
         perimetro = 4 * lado
-        label_resultado.configure(text=f"Área do quadrado: {area} - Perímetro do quadrado: {perimetro}")
+        mostrar.configure(text=f"Área do quadrado: {area} - Perímetro do quadrado: {perimetro}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira um número válido.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira um número válido.")
 
 def area_perimetro_ret():
     try:
@@ -99,11 +99,11 @@ def area_perimetro_ret():
             largura, altura = lista
             area = largura * altura
             perimetro = 2 * (largura + altura)
-            label_resultado.configure(text=f"Área do retângulo: {area} - Perímetro do retângulo: {perimetro}")
+            mostrar.configure(text=f"Área do retângulo: {area} - Perímetro do retângulo: {perimetro}")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (largura e altura).")
+            mostrar.configure(text="Por favor, insira dois valores (largura e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def area_perimetro_tri():
     try:
@@ -114,11 +114,11 @@ def area_perimetro_tri():
             area = 0.5 * base * altura
             hipotenusa = math.sqrt(base**2 + altura**2)
             perimetro = base + altura + hipotenusa
-            label_resultado.configure(text=f"Área do triângulo: {area} - Perímetro do triângulo: {perimetro}")
+            mostrar.configure(text=f"Área do triângulo: {area} - Perímetro do triângulo: {perimetro}")
         else:
-            label_resultado.configure(text="Por favor, insira base e altura separados por um espaço: ")
+            mostrar.configure(text="Por favor, insira base e altura separados por um espaço: ")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def area_perimetro_circ():
     try:
@@ -126,9 +126,9 @@ def area_perimetro_circ():
         raio = float(entrada)
         area = math.pi * raio ** 2
         perimetro = 2 * math.pi * raio
-        label_resultado.configure(text=f"Área do círculo: {area} - Perímetro do círculo: {perimetro}")
+        mostrar.configure(text=f"Área do círculo: {area} - Perímetro do círculo: {perimetro}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira o raio do circulo ou um número válido.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira o raio do circulo ou um número válido.")
 
 def area_perimetro_trap():
     try:
@@ -140,11 +140,11 @@ def area_perimetro_trap():
             lado_obliquo = math.sqrt(((base_maior - base_menor) / 2)**2 + altura**2)
             perimetro = base_maior + base_menor + 2 * lado_obliquo
 
-            label_resultado.configure(text=f"Área do trapézio: {area} - Perímetro do trapézio: {perimetro}")
+            mostrar.configure(text=f"Área do trapézio: {area} - Perímetro do trapézio: {perimetro}")
         else:
-            label_resultado.configure(text="Insira a base maior, a menor e a altura, separados por um espaço: ")
+            mostrar.configure(text="Insira a base maior, a menor e a altura, separados por um espaço: ")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Volumes de Sólidos ----
 def volume_cilindro():
@@ -154,23 +154,23 @@ def volume_cilindro():
         if len(lista) == 2:
             raio, altura = lista
             volume = math.pi * raio ** 2 * altura
-            label_resultado.configure(text=f"Volume do cilindro: {volume}")
+            mostrar.configure(text=f"Volume do cilindro: {volume}")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (raio e altura).")
+            mostrar.configure(text="Por favor, insira dois valores (raio e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def volume_cubo():
     try:
         entrada = entry1.get() 
         aresta = float(entrada)
         if aresta < 0:
-            label_resultado.configure(text="A aresta deve ser um número não negativo.")
+            mostrar.configure(text="A aresta deve ser um número não negativo.")
         else:
             volume = aresta ** 3
-            label_resultado.configure(text=f"Volume do cubo: {volume}")
+            mostrar.configure(text=f"Volume do cubo: {volume}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira um número válido.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira um número válido.")
 
 def volume_paralelepipedo():
     try:
@@ -179,23 +179,23 @@ def volume_paralelepipedo():
         if len(lista) == 3:
             comprimento, largura, altura = lista
             volume = comprimento * largura * altura
-            label_resultado.configure(text=f"Volume do paralelepípedo: {volume}")
+            mostrar.configure(text=f"Volume do paralelepípedo: {volume}")
         else:
-            label_resultado.configure(text="Por favor, insira três valores (comprimento, largura e altura).")
+            mostrar.configure(text="Por favor, insira três valores (comprimento, largura e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def volume_esfera():
     try:
         entrada = entry1.get()
         raio = float(entrada)
         if raio < 0:
-            label_resultado.configure(text="O raio deve ser um número não negativo.")
+            mostrar.configure(text="O raio deve ser um número não negativo.")
         else:
             volume = (4/3) * math.pi * raio ** 3
-            label_resultado.configure(text=f"Volume da esfera: {volume}")
+            mostrar.configure(text=f"Volume da esfera: {volume}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira um número válido.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira um número válido.")
 
 def volume_piramide():
     try:
@@ -204,11 +204,11 @@ def volume_piramide():
         if len(lista) == 2:
             area_base, altura = lista
             volume = (1/3) * area_base * altura
-            label_resultado.configure(text=f"Volume da pirâmide: {volume}")
+            mostrar.configure(text=f"Volume da pirâmide: {volume}")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (área da base e altura).")
+            mostrar.configure(text="Por favor, insira dois valores (área da base e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def volume_prisma():
     try:
@@ -217,11 +217,11 @@ def volume_prisma():
         if len(lista) == 2:
             area_base, altura = lista
             volume = area_base * altura
-            label_resultado.configure(text=f"Volume do prisma: {volume}")
+            mostrar.configure(text=f"Volume do prisma: {volume}")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (área da base e altura).")
+            mostrar.configure(text="Por favor, insira dois valores (área da base e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def volume_cone():
     try:
@@ -230,11 +230,11 @@ def volume_cone():
         if len(lista) == 2:
             raio, altura = lista
             volume = (1/3) * math.pi * raio ** 2 * altura
-            label_resultado.configure(text=f"Volume do cone: {volume}")
+            mostrar.configure(text=f"Volume do cone: {volume}")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (raio e altura).")
+            mostrar.configure(text="Por favor, insira dois valores (raio e altura).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Equações ---- 
 def primeira_equacao():
@@ -245,13 +245,13 @@ def primeira_equacao():
             a, b = lista
             if a != 0:
                 x = -b / a
-                label_resultado.configure(text=f"Resultado: x = {x}")
+                mostrar.configure(text=f"Resultado: x = {x}")
             else:
-                label_resultado.configure(text="O coeficiente 'a' não pode ser zero.")
+                mostrar.configure(text="O coeficiente 'a' não pode ser zero.")
         else:
-            label_resultado.configure(text="Por favor, insira dois valores (coeficiente a e coeficiente b).")
+            mostrar.configure(text="Por favor, insira dois valores (coeficiente a e coeficiente b).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def segunda_equacao():
     try:
@@ -264,16 +264,16 @@ def segunda_equacao():
             if delta > 0:
                 x1 = (-b + math.sqrt(delta)) / (2 * a)
                 x2 = (-b - math.sqrt(delta)) / (2 * a)
-                label_resultado.configure(text=f"Soluções da equação do 2º grau: x¹ = {x1}, x² = {x2}")
+                mostrar.configure(text=f"Soluções da equação do 2º grau: x¹ = {x1}, x² = {x2}")
             elif delta == 0:
                 x = -b / (2 * a)
-                label_resultado.configure(text=f"Solução da equação do 2º grau: x = {x}")
+                mostrar.configure(text=f"Solução da equação do 2º grau: x = {x}")
             else:
-                label_resultado.configure(text="A equação não possui raízes reais.")
+                mostrar.configure(text="A equação não possui raízes reais.")
         else:
-            label_resultado.configure(text="Por favor, insira três valores (coeficientes a, b e c).")
+            mostrar.configure(text="Por favor, insira três valores (coeficientes a, b e c).")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Conversão de Medidas ---- 
 def m_para_cm():
@@ -281,54 +281,54 @@ def m_para_cm():
         entrada = entry1.get()
         metros = float(entrada)
         centimetros = metros * 100
-        label_resultado.configure(text=f"{metros} m é igual a {centimetros} cm.")
+        mostrar.configure(text=f"{metros} m é igual a {centimetros} cm.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def cm_para_m():
     try:
         entrada = entry1.get()
         centimetros = float(entrada)
         metros = centimetros / 100
-        label_resultado.configure(text=f"{centimetros} cm é igual a {metros} m.")
+        mostrar.configure(text=f"{centimetros} cm é igual a {metros} m.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def m_para_mm():
     try:
         entrada = entry1.get()
         metros = float(entrada)
         milimetros = metros * 1000
-        label_resultado.configure(text=f"{metros} m é igual a {milimetros} mm.")
+        mostrar.configure(text=f"{metros} m é igual a {milimetros} mm.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def mm_para_m():
     try:
         entrada = entry1.get()
         milimetros = float(entrada)
         metros = milimetros / 1000
-        label_resultado.configure(text=f"{milimetros} mm é igual a {metros} m.")
+        mostrar.configure(text=f"{milimetros} mm é igual a {metros} m.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def km_para_m():
     try:
         entrada = entry1.get()
         quilometros = float(entrada)
         metros = quilometros * 1000
-        label_resultado.configure(text=f"{quilometros} km é igual a {metros} m.")
+        mostrar.configure(text=f"{quilometros} km é igual a {metros} m.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def m_para_km():
     try:
         entrada = entry1.get()
         metros = float(entrada)
         quilometros = metros / 1000
-        label_resultado.configure(text=f"{metros} m é igual a {quilometros} km.")
+        mostrar.configure(text=f"{metros} m é igual a {quilometros} km.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Conversão de Volumes ----
 def l_para_ml():
@@ -336,36 +336,36 @@ def l_para_ml():
         entrada = entry1.get()
         litros = float(entrada)
         mililitros = litros * 1000
-        label_resultado.configure(text= f"{litros} litros é igual a {mililitros} mililitros.")
+        mostrar.configure(text= f"{litros} l é igual a {mililitros} ml.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def ml_para_l():
     try:
         entrada = entry1.get()
         mililitros = float(entrada)
         litros = mililitros / 1000
-        label_resultado.configure(text=f"{mililitros} mililitros é igual a {litros} litros.")
+        mostrar.configure(text=f"{mililitros} ml é igual a {litros} l.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def metros_cubicos_para_l():
     try:
         entrada = entry1.get()
         metros_cubicos = float(entrada)
         litros = metros_cubicos * 1000
-        label_resultado.configure(text=f"{metros_cubicos} metros cúbicos é igual a {litros} litros.")
+        mostrar.configure(text=f"{metros_cubicos} m³ é igual a {litros} l.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def l_para_metros_cubicos():
     try:
         entrada = entry1.get()
         litros = float(entrada)
         metros_cubicos = litros / 1000
-        label_resultado.configure(text=f"{litros} litros é igual a {metros_cubicos} metros cúbicos.")
+        mostrar.configure(text=f"{litros} l é igual a {metros_cubicos} m³.")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Porcentagem ---- 
 def aumento():
@@ -373,28 +373,27 @@ def aumento():
         entrada = float(entry1.get())
         aumento = float(entry2.get())
         resultado = entrada * (1 + aumento / 100)
-        label_resultado.configure(text=f"Valor com aumento: {resultado}")
+        mostrar.configure(text=f"Valor com aumento: {resultado}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira primeiro números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira primeiro números válidos.")
 
 def diminuição():
     try:
         entrada = float(entry1.get())
         diminuicao = float(entry2.get())
-        diminuicao = float(entrada)
         resultado = entrada * (1 - diminuicao / 100)
-        label_resultado.configure(text=f"Valor com diminuição: {resultado}")
+        mostrar.configure(text=f"Valor com diminuição: {resultado}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def porcentagem():
     try:
         entrada = float(entry1.get())
         porcentagem = float(entry2.get())
         resultado = entrada * (porcentagem / 100)
-        label_resultado.configure(text=f"O valor da porcentagem é: {resultado}")
+        mostrar.configure(text=f"O valor da porcentagem é: {resultado}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # ---- Estatística Básica ----
 def media():
@@ -402,9 +401,9 @@ def media():
         entrada = entry1.get()
         numeros = list(map(float, entrada.split()))
         media = sum(numeros) / len(numeros)
-        label_resultado.configure(text=f"A média dos números é: {media}")
+        mostrar.configure(text=f"A média dos números é: {media}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 def mediana():
     try:
@@ -416,22 +415,9 @@ def mediana():
             mediana = (numeros[meio - 1] + numeros[meio]) / 2
         else:
             mediana = numeros[meio]
-        label_resultado.configure(text=f"A mediana dos números é: {mediana}")
+        mostrar.configure(text=f"A mediana dos números é: {mediana}")
     except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
-
-def moda():
-    try:
-        entrada = entry1.get()
-        numeros = list(map(float, entrada.split()))
-        contagem = {num: numeros.count(num) for num in set(numeros)}
-        moda = [num for num, count in contagem.items() if count == max(contagem.values())]
-        if len(moda) == len(numeros):
-            label_resultado.configure(text="Não há moda.")
-        else:
-            label_resultado.configure(text=f"A moda dos números é: {', '.join(map(str, moda))}")
-    except ValueError:
-        label_resultado.configure(text="Entrada inválida. Por favor, insira números válidos.")
+        mostrar.configure(text="Entrada inválida. Por favor, insira números válidos.")
 
 # === Escolha de categoria ===
 def atualizar_opcoes(opcao_inicial):
@@ -468,7 +454,7 @@ def atualizar_opcoes(opcao_inicial):
         menu_calculo2.set("Selecionar Opção")
         mostrar_entradas()
     elif opcao_inicial == "Estatística Básica":
-        menu_calculo2.configure(values=["Média", "Mediana", "Moda"], command=atualizar_calculo)
+        menu_calculo2.configure(values=["Média", "Mediana"], command=atualizar_calculo)
         menu_calculo2.set("Selecionar Opção")
         mostrar_entradas()
 
@@ -588,9 +574,6 @@ def atualizar_calculo(tipo_calculo):
     elif tipo_calculo == "Mediana":
         botao_calcular.configure(command=mediana)
         mostrar_entradas(tipo_calculo)
-    elif tipo_calculo == "Moda":
-        botao_calcular.configure(command=moda)
-        mostrar_entradas(tipo_calculo)
 
 # ----------------- ADICIONAR -----------------------
 
@@ -619,8 +602,9 @@ app.grid_columnconfigure(1, weight=1)
 # Primeira escolha: categorias de cálculos
 label1 = ctk.CTkLabel(app, text="Escolha uma categoria")
 label1.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
-menu_calculo1 = ctk.CTkOptionMenu(app, values=["Selecionar Opção", "Operações Aritméticas", "Área e Perímetro", "Volumes de Sólidos", 
-"Equações", "Conversão de Medidas", "Conversão de Volumes", "Porcentagem", "Estatística Básica"], command=atualizar_opcoes) #---------- ADICIONAR CATEGORIA----------
+menu_calculo1 = ctk.CTkOptionMenu(app, values=["Selecionar Opção", "Operações Aritméticas", 
+"Área e Perímetro", "Volumes de Sólidos", "Equações", "Conversão de Medidas", 
+"Conversão de Volumes", "Porcentagem", "Estatística Básica"], command=atualizar_opcoes)                                 #---------- ADICIONAR CATEGORIA----------
 menu_calculo1.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
 
 # Segunda escolha: tipo de cálculo dentro da categoria
@@ -637,8 +621,8 @@ entry2 = ctk.CTkEntry(app)
 botao_calcular = ctk.CTkButton(app, text="Calcular")
 botao_calcular.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
 # Exibe o resultado
-label_resultado = ctk.CTkLabel(app, text=None)
-label_resultado.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
+mostrar = ctk.CTkLabel(app, text=None)
+mostrar.grid(row=7, column=0, columnspan=2, padx=10, pady=10)
 
 # Iniciar a aplicação
 app.mainloop()
